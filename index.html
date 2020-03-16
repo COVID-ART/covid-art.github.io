@@ -1,0 +1,36 @@
+<meta CHARSET="UTF-8">
+<BASE HREF="covid-art.github.io">
+<TITLE>COVID - ART!</TITLE>
+<noscript>Your browser does not support JavaScript!</noscript>
+<meta NAME="COVID - ART!" CONTENT="Upload and Express all your creations about COVID-19!">
+<meta name="description" content="Upload and Express all your creations about COVID-19!">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+
+<div id="app">
+    <input type="file" @change="previewFiles" multiple>
+    <div ref="view-all-window"></div>
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            someData: null,
+        },
+        methods: {
+            previewFiles(event) {
+                console.log(event.target.files);
+                // this.$refs['view-all-window'].append(event.target.files);
+                // for (let n = 0; n > event.target.files.length; n++) {
+                //     this.$refs['view-all-window'].append(event.target.files[n]);
+                //}
+            }
+        }
+    })
+</script>
+
+<style>
+
+</style>
