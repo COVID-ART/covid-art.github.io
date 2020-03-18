@@ -22,7 +22,9 @@
     <div class="dropzone">
         <div class="info"></div>
     </div>
-    <div class="vAll" ref="view-all-window"></div>
+    <div class="vAll" ref="view-all-window">
+
+    </div>
     <div class="mobile">
         <svg width="375" height="1782" viewBox="0 0 375 1782" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g clip-path="url(#clip0)">
@@ -117,22 +119,14 @@
     </div>
 </div>
 
+
 <script>
     var app = new Vue({
         el: '#app',
         data: {
-            someData: null,
         },
         methods: {
-            previewFiles(event) {
-                console.log(event.target.files);
-                // this.$refs['view-all-window'].append(event.target.files);
-                // for (let n = 0; n > event.target.files.length; n++) {
-                //     this.$refs['view-all-window'].append(event.target.files[n]);
-                //}
-            },
             upload() {
-                console.log('MOTHERFUCKERRR')
                 this.$refs['input'].click()
             }
         }
@@ -162,8 +156,8 @@
             display: none;
         }
         .vAll img {
-            width: 20em;
-            margin: 50%;
+            /*width: 20em;*/
+            /*margin: 50%;*/
         }
     }
     @media screen and (min-width:  700px) and (max-width:  1000px){
@@ -174,8 +168,8 @@
             display: none;
         }
         .vAll img {
-            width: 250em;
-            margin: 50%;
+            /*width: 250em;*/
+            /*margin: 50%;*/
         }
     }
     @media screen and (max-width:  700px) {
@@ -186,17 +180,21 @@
             display: none;
         }
         .vAll img {
-            width: 10em;
-            margin: 50%;
+            /*width: 10em;*/
+            /*margin: 50%;*/
         }
     }
 
     .vAll{
+        width: 10em;
+        margin: 1em;
         position: absolute;
         top: 100%;
-
     }
 
+    .info{
+        display: none;
+    }
 
     body.loading .loading-modal {
         display: block
@@ -251,9 +249,21 @@
         margin-top: 15%;
         margin-bottom: 15%;
     }
+
+    .img {
+        position: relative;
+        margin-top: 3em;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
 </style>
 
 
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script defer src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
 
-
-
+<script defer src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+<!-- Initialize Firebase -->
+<script defer src="firebase/init.js"></script>
