@@ -2,7 +2,7 @@ var feedback = function(res) {
     if (res.success === true) {
         var get_link = res.data.link.replace(/^http:\/\//i, 'https://');
         document.querySelector('.status').classList.add('bg-success');
-        document.querySelector('.vAll').innerHTML =
+        document.querySelector('.vAll').innerHTML +=
             '<img id="gallery" class="img" alt="Imgur-Upload" src=\"' + get_link + '\"/>';
         window.location.hash = '#gallery';
         write_url(get_link)
