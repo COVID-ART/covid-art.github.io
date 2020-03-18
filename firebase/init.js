@@ -22,8 +22,8 @@ function get_imgs() {
         snapshot.forEach(doc => {
 
             console.log( doc.data().url );
-            document.querySelector('.vAll').innerHTML +=
-                '<img class="img" alt="Imgur-Upload" src=\"' + doc.data().url + '\"/>';
+            document.querySelector('.vAll').innerHTML =
+                '<img class="img" alt="Imgur-Upload" src=\"' + doc.data().url + '\"/>' + document.querySelector('.vAll').innerHTML;
 
         });
     });
