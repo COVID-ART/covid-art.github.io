@@ -19,6 +19,9 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
 
 <div id="app">
+    <div class="header">
+        <img src="header.png" alt="corona 19">
+    </div>
     <div class="dropzone">
         <div class="info"></div>
     </div>
@@ -164,6 +167,11 @@
             width: auto;
             height: auto;
         }
+        .header img{
+            position: absolute;
+            top: 40%;
+            width: 75%;
+        }
     }
     @media screen and (min-width:  700px) and (max-width:  1000px){
         .desktop{
@@ -181,6 +189,11 @@
             width: auto;
             height: auto;
         }
+        .header img{
+            position: absolute;
+            top: 40%;
+            width: 75%;
+        }
     }
     @media screen and (max-width:  700px) {
         .desktop{
@@ -197,6 +210,11 @@
             max-width:300px;
             width: auto;
             height: auto;
+        }
+        .header img{
+            position: absolute;
+            top: 50%;
+            width: 90%;
         }
     }
 
@@ -265,6 +283,10 @@
         margin-right: auto;
         margin-top: 15%;
         margin-bottom: 15%;
+    }
+
+    .header{
+        display: flex;
     }
 </style>
 
